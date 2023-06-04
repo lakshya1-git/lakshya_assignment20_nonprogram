@@ -1,1 +1,71 @@
+1. What is the relationship between def statements and lambda expressions ?
+2. What is the benefit of lambda?
+3. Compare and contrast map, filter, and reduce.
+4. What are function annotations, and how are they used?
+5. What are recursive functions, and how are they used?
+6. What are some general design guidelines for coding functions?
+7. Name three or more ways that functions can communicate results to a caller.
 
+Answer 1: Both lambda and def create the same kind of function – they have the same kind of metadata and capabilities. 
+
+Answer2: Python’s lambda expressions allow a function to be created and passed in one line of code.
+
+Answer3:
+map() function returns a map object(which is an iterator) of the results after applying the given function to each item of a given iterable (list, tuple etc.) Syntax :
+
+map(fun, iter)
+def addition(x):
+    return x + x
+# We double all numbers using map()
+num = (1, 2)
+result = map(addition, numbers)
+print(list(result))
+
+The filter() method filters the given sequence with the help of a function that tests each element in the sequence to be true or not. 
+
+def fun(variable):
+    letters = ['a', 'e', 'i', 'o', 'u']
+    if (variable in letters):
+        return True
+    else:
+        return False
+ 
+ 
+# sequence
+sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r']
+ 
+# using filter function
+filtered = filter(fun, sequence)
+ 
+print('The filtered letters are:')
+for s in filtered:
+    print(s)
+
+
+Reduce- it doesn't return another iterable, instead it returns a single value.
+import functools
+def mult(x,y):
+    print("x=",x," y=",y)
+    return x*y
+
+fact=functools.reduce(mult, range(1, 4))
+print ('Factorial of 3: ', fact)
+
+Answer4:
+Function annotation is the standard way to access the metadata with the arguments and the return value of the function.
+def func(a: 'int') -> 'int':
+    pass
+
+Answer5:
+A process in which a function calls itself is called recursion. This process helps ease the method of solving problems by replacing iterative code with recursive statements.
+It is used call already created function.
+
+Answer6 :
+Safe: It can be used without causing harm.
+Secure: It can’t be hacked.
+Reliable: It functions as it should, every time.
+Testable: It can be tested at the code level.
+Maintainable: It can be maintained, even as your codebase grows.
+Portable: It works the same in every environment.
+
+Answer7 : Call by value  and call by function can be used to call funciton
