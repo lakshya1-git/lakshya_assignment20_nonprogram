@@ -1,1 +1,32 @@
+Answer1:
+1 2 8
+Because a , b value will be overwrite when calling function and c value is already 8
 
+Anwer2:
+ 1 2 3 
+Value of  a , b is defined on function but value of c will be over write.
+
+Answer3: 1 (2, 3)
+Value of prags will give (2,3)
+
+Answer4: 1 {'c': 3, 'b': 2}
+pargs will give output as key
+
+Answer5:
+1 5 6 5
+Value of b,c will be 5,6
+
+
+
+Answer6:
+
+rint(l) # Output: 1
+print(m) # Output: ['x']
+print(n) # Output: {'a': 'y'} 
+We define a function called func that takes three parameters: a, b, and c.
+Inside the function, we perform the following operations:
+Assign the value 2 to the variable a.
+Modify the first element of the list b and change it to 'x'.
+Modify the value associated with the key 'a' in the dictionary c and change it to 'y'.
+Outside the function, we create three variables: l with the value 1, m as a list containing [1], and n as a dictionary with {'a': 0}.
+We call the func function with the variables l, m, and n as arguments 
